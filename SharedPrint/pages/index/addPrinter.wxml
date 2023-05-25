@@ -1,0 +1,20 @@
+<!--pages/index/addPrinter.wxml-->
+<!-- //添加打印机  输入打印机位置  提交 -->
+<view class="mytitle">添加打印机</view>
+
+
+<view class='page'>
+    <form bindsubmit='formSubmit' bindreset='formReset' report-submit='true'>
+        <view class='set1'>
+            <view>
+                <text>位置：</text>
+            </view>
+            <view class='input'>
+                <input placeholder='请输入打印的位置' name='position'></input>
+            </view>
+        </view>
+        <view class='btn'>
+            <button form-type='submit' type='primary'>提交</button>
+        </view>
+    </form>
+</view>

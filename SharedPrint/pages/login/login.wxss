@@ -1,0 +1,83 @@
+.login-btn{
+    width: 100%;
+    height: 40px;
+    line-height: 20px;
+    background-color: rgb(155, 235, 180);
+    color: #313131;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+.title-text{
+    font-size: 20px;
+    color: #3c3535;
+    font-weight: 800;
+    text-align: center;
+}
+.inputs{
+    /* 外边框 */
+    border: 1px solid #ccc;
+    /* 圆角 */
+    border-radius: 5px;
+    /* 内边距 */
+    padding: 0 10px;
+    /* 背景色 */
+    background-color: #1fd62e;
+    
+}
+/* pages/login/login.wxss */
+.page{
+    margin: 100rpx,50rpx,50rpx,100rpx;
+  }
+  
+  .set1{
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* 边框 */
+    border: 1px solid #ccc;
+    /* 圆角 */
+    border-radius: 5px;
+    /* 内边距 */
+    padding: 0 10px;
+    /* 背景色 */
+    background-color: #a3dfa8;
+    /* 下边距离 */
+    margin-bottom: 20px;
+
+  }
+
+  .set2{
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* 边框 */
+    border: 1px solid #ccc;
+    /* 圆角 */
+    border-radius: 5px;
+    /* 内边距 */
+    padding: 0 10px;
+    /* 背景色 */
+    background-color: #c5e9c8;
+    /* 下边距离 */
+    margin-bottom: 20px;
+  }
+  
+  .btn{
+    width: 100%
+  }
+  
+

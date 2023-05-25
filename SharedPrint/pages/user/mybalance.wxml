@@ -1,0 +1,9 @@
+<view class="mytitle">我的个人中心</view>
+<!-- 我的余额展示 -->
+<view class="mybalance">
+    <view class="mybalance__title">我的余额</view>
+    <view class="mybalance__money">{{myBalance}}元</view>
+</view>
+<view class="mybalance__btn" bindtap="recharge">充值</view>
+
+<van-action-sheet show="{{ show }}" actions="{{ actions }}" description="选择响应的金额进行充值" bind:select="onSelect" />

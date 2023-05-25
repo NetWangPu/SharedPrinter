@@ -1,0 +1,55 @@
+.mytitle{
+    font-size: 16px;
+    /* 文字居中显示 */
+    text-align: center;
+}
+.user{
+    font-size: 20px; /* 字体大小 */
+    height: 100px; /* 高度100% */
+    width: 100%; /* 宽度500 */
+    display: flex; /* 布局 */
+    flex-direction: row; /* 横向布局 */
+}
+.user-img{
+    width: 100px; /* 宽度100 */
+    height: 100px; /* 高度100 */
+    /* 垂直居中显示 */
+    display: flex;
+    align-items: center;
+    /* 靠左显示 */
+    justify-content: flex-start;
+}
+.user-left{
+    width: 30%; /* 宽度50% */
+    height: 100%; /* 高度50% */
+    display: flex; /* 布局 */
+    /* 垂直居中显示 */
+    align-items: center;
+    
+}
+.user-right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button-bt{
+    width: 100%;
+    height: auto;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bt{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}

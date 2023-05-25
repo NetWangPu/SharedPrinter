@@ -1,0 +1,26 @@
+<!--pages/index/print.wxml-->
+<van-steps steps="{{ steps }}" active="{{ active }}" />
+<view>
+  <view class="list-title">第一步：上传打印文件</view>
+</view>
+
+<van-button type="primary" size="large" bindtap="uploadFile">上传文件</van-button>
+
+<view>
+  <view class="list-title">第二步：选择打印参数</view>
+</view>
+<van-cell-group value="{{ radios }}" bind:change="onchange">
+  <van-field value="1" id="print-count" label="打印份数" left-icon="setting" placeholder="请输入份数" disabled="{{ flase }}" />
+</van-cell-group>
+<van-cell-group>
+  <van-field value="{{ valuepages }}" id="print-pages" bind:change="changePages" label="打印页数" left-icon="setting" placeholder="请输入页数" disabled="{{ flase }}" />
+</van-cell-group>
+
+<view class="radio-wrapper">
+  <van-radio-group value="{{ radio }}" bind:change="onChange" class="radio" disabled="{{ flase }}">
+    <van-radio class="radio-item" name="2" value="2">彩色打印</van-radio>
+    <van-radio class="radio-item" name="1" value="1">黑白打印</van-radio>
+  </van-radio-group>
+</view>
+
+<van-submit-bar price="{{ priace }}" button-text="提交订单" bind:submit="onSubmit" />

@@ -1,0 +1,49 @@
+<view wx:if="{{isAdmin}}">
+    <view class="user">
+        <view class="user-right">
+            <view class="user-name">管理员Admin</view>
+            <view class="user-info"></view>
+        </view>
+        <view class="user-left">
+            <image src="/img/user.png" class="user-img"></image>
+        </view>
+    </view>
+    <van-grid column-num="2" border="true">
+        <van-grid-item icon="shopping-cart-o" text="查看订单" badge="{{0}}" url="/pages/user/allOrders" />
+        <van-grid-item icon="chart-trending-o" text="导出数据" bind:click = "exportExcal" />
+    </van-grid>
+    <view class="button-bt">
+        <van-button bind:click="logout" class="bt" type="danger">退出登录</van-button>
+    </view>
+
+</view>
+<!--pages/user/my.wxml-->
+<!-- 个人中心 -->
+<!-- 显示用户的昵称和头像 昵称是服务器获取的数据 在js数据中的nameID 头像是固定的在本地的相对路径里面 左右摆放 -->
+<view wx:else>
+    <view class="mytitle">我的个人中心</view>
+    <view class="user">
+        <view class="user-right">
+            <view class="user-name">编号：{{nameID}}</view>
+            <view class="user-info"></view>
+        </view>
+        <view class="user-left">
+            <image src="/img/user.png" class="user-img"></image>
+        </view>
+    </view>
+    <!-- 业务组件 -->
+    <van-grid column-num="3" border="true">
+        <van-grid-item icon="shopping-cart-o" text="我的订单" badge="{{0}}" url="/pages/user/myOrders" />
+        <van-grid-item icon="balance-o" text="我的余额" url="/pages/user/mybalance" />
+        <van-grid-item icon="question-o" text="问题解答" url="/pages/user/qa" />
+    </van-grid>
+
+    <van-action-sheet show="{{ show }}" title="标题">
+        <view>内容</view>
+    </van-action-sheet>
+
+    <view class="button-bt">
+        <van-button bind:click="11" class="bt" type="primary">更改密码</van-button>
+        <van-button bind:click="logout" class="bt" type="danger">退出登录</van-button>
+    </view>
+</view>

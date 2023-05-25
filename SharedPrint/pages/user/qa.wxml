@@ -1,0 +1,11 @@
+<van-collapse value="{{ activeNames }}" bind:change="onChange">
+  <van-collapse-item title="如何充值？" name="1">
+    在我的中心中点击余额模块，在余额界面即可充值提现，以及查看自己的账户余额。
+  </van-collapse-item>
+  <van-collapse-item title="如何查看我的订单？" name="2">
+    在我的中心中点击订单模块，在订单界面即可查看自己历史记录、正在打印文件，以及查看订单的所有信息。
+  </van-collapse-item>
+  <van-collapse-item title="打印为什么会失败" name="2">
+    有可能文件上传失败 或者约不足检查一下余额是否充足
+  </van-collapse-item>
+</van-collapse>

@@ -1,0 +1,18 @@
+<view class="mytitle">打印机管理</view>
+
+<view class="list-item">
+    <image src="../../img/print.png" class="print-img" />
+    <view class="list-item-info">
+        <view class="list-item-time">剩余纸数量:{{printerInfo.numberofpaper}}</view>
+        <view class="list-item-lng">打印机位置:{{printerInfo.position}}</view>
+        <view class="list-item-lat">打印机状态:{{printerInfo.state}}</view>
+    </view>
+</view>
+<view class="button-bt">
+    <!-- 调用updateState(1) -->
+    <van-button type="info" bind:click =  "updateState1">打印机状态在线</van-button>
+    <!-- 调用updateState(0) -->
+    <van-button type="warning"bind:click = "updateState0">打印机状态维修</van-button>
+    <van-button type="primary"bind:click = "addPaper">加纸100页</van-button>
+    <van-button type="danger" bind:click = "deletePrinter">删除打印机</van-button>
+</view>

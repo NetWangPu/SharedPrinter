@@ -1,0 +1,43 @@
+/* pages/user/mybalance.wxss */
+.mytitle{
+    font-size: 16px;
+    /* 文字居中显示 */
+    text-align: center;
+}
+
+.mybalance{
+    font-size: 20px; /* 字体大小 */
+    height: 100px; /* 高度100% */
+    width: 100%; /* 宽度500 */
+    display: flex; /* 布局 */
+    flex-direction: row; /* 横向布局 */
+}
+.mybalance__title{
+    width: 70%; /* 宽度50% */
+    height: 100%; /* 高度50% */
+    display: flex; /* 布局 */
+    /* 垂直居中显示 */
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+.mybalance__money{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(47, 255, 0);
+}
+
+.mybalance__btn{
+    width: 40%;
+    height: auto;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blanchedalmond;
+}

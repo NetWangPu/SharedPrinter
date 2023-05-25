@@ -1,0 +1,43 @@
+<!--pages/sharedResource/sharedResource.wxml-->
+<!-- 共享文件 -->
+<view wx:if="{{isAdmin}}">
+    <view class="scan-button" bindtap="uploadFile">
+        <text class="scan-text">上传
+            文件</text>
+    </view>
+    <view>
+        <view class="list-title">共享资源列表</view>
+    </view>
+    <view>
+        <view class="list-len">共{{fileListLen}}个共享文件</view>
+        <view class="list" wx:for="{{fileList}}" wx:key="id" bindtap="DeleteFile" data-name="{{item.name}}">
+            <view class="list-item">
+                <image src="../../img/file.png" class="print-img" />
+                <view class="list-item-info">
+                    <view class="list-item-time">文件名称:{{item.name}}</view>
+                    <view class="list-item-lng">文件大小:{{item.size}}</view>
+                    <view class="list-item-lat">上传日期:{{item.time}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view wx:else>
+    <view>
+        <view class="list-title">共享资源列表</view>
+    </view>
+    <view>
+        <view class="list-len">共{{fileListLen}}个共享文件</view>
+        <view class="list" wx:for="{{fileList}}" wx:key="id" bindtap="DownFile" data-name="{{item.name}}">
+            <view class="list-item">
+                <image src="../../img/file.png" class="print-img" />
+                <view class="list-item-info">
+                    <view class="list-item-time">文件名称:{{item.name}}</view>
+                    <view class="list-item-lng">文件大小:{{item.size}}</view>
+                    <view class="list-item-lat">上传日期:{{item.time}}</view>
+                    <view class="list-item-lat">上传者:{{item.uploader}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

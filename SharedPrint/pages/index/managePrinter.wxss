@@ -1,0 +1,62 @@
+.mytitle{
+    font-size: 16px;
+    /* 文字居中显示 */
+    text-align: center;
+}
+.list-item{
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10px;
+    /* 圆角 */
+    border-radius: 10px;
+    /* 阴影 */
+    box-shadow: 0 0 10px #ccc;
+    /* 边框 */
+    border: 1px solid #4b4848;
+}
+/* print-img在最左边list-item-time、list-item-lng、list-item-lat在最右边 */
+.print-img{
+    width: 30%;
+    height: 120px;
+    /* 图片自适应 */
+    object-fit: cover;
+    /* 左侧对齐 */
+    float: left;
+}
+.list-item-info{
+    width: 70%;
+    height: 120px;
+    /* 左侧对齐 */
+    float: left;
+}
+.list-item-time{
+    font-size: 13px;
+    color: #999;
+    margin: 10px 0;
+    /* 居中 */
+
+}
+.list-item-lng{
+    font-size: 16px;
+    color: #191818;
+    margin: 10px 0;
+}
+
+.list-item-lat{
+    font-size: 12px;
+    color: #0f0823;
+    margin: 10px 0;
+}
+.button-bt{
+    /* 流式布局 */
+    display: flex;
+    /* 垂直 */
+    flex-direction: column;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    /* 子元素之间的间距 */
+    gap: 40px;
+}
+  

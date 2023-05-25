@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/index/print",
+    "pages/user/my",
+    "pages/user/myOrders",
+    "pages/sharedResource/sharedResource",
+    "pages/user/recharge",
+    "pages/user/mybalance",
+    "pages/user/qa",
+    "pages/index/managePrinter",
+    "pages/index/addPrinter",
+    "pages/user/allOrders"
+  ],
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",  
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/indexSelect.png"
+      },
+      {
+        "pagePath": "pages/sharedResource/sharedResource",
+        "text": "资源",
+        "iconPath": "img/resource.png",
+        "selectedIconPath": "img/resourceSelect.png"
+      },
+      {
+        "pagePath": "pages/user/my",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/mySelect.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "共享打印机",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

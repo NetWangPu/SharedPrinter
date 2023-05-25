@@ -1,0 +1,48 @@
+<!-- 登录页面 可以选择用户or管理员登录 也可以选择注册 -->
+<!-- 标题 -->
+<view class = "title">
+    <text class = "title-text">[欢迎使用XX共享打印平台]</text>
+</view>
+
+<!-- 登录表单 用于用户登录 -->
+<view class='page'>
+  <form bindsubmit='formSubmit' bindreset='formReset' report-submit='true'>
+      <view class='set1'>
+        <view>
+          <text>账号：</text>
+        </view>
+        <view class='input'>
+          <input placeholder='请输入账号' name='username'></input>
+        </view>
+      </view>
+      <view class='set1'>
+        <view>
+          <text>密码：</text>
+        </view>
+         <view class='input'>
+          <input placeholder='请输入密码' password='true' name='password'></input>
+        </view>
+      </view>
+
+      <!-- 单选框 三个选项 用户or管理员or注册 只能选择一个 -->
+        <view class='set2'>
+            <view class='radio'>
+            <radio-group name='radiogroup'>
+                <label>
+                <radio value='user' checked='true'>用户</radio>
+                </label>
+                <label>
+                <radio value='admin'>管理员</radio>
+                </label>
+                <label>
+                <radio value='register'>注册</radio>
+                </label>
+            </radio-group>
+            </view>
+        </view>
+
+      <view class='btn'>
+        <button form-type='submit' type='primary'>提交</button>
+      </view>
+  </form>
+</view>

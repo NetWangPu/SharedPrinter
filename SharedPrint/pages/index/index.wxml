@@ -1,0 +1,65 @@
+<van-notice-bar left-icon="volume-o" text="在主页上选择打印机进入打印文件上传参数调整页面点击提交即可直接打印" />
+<view wx:if="{{isAdmin}}">
+    <!-- 打印机列表 -->
+    <view>
+        <view class="list-title">管理打印机列表</view>
+    </view>
+    <view>
+        <view class="list-len">共{{printerListLen}}台打印机</view>
+        <view class="list" wx:for="{{printerList}}" wx:key="id" bindtap="managePrinter" data-id="{{item.id}}">
+            <view class="list-item">
+                <image src="../../img/print.png" class="print-img" />
+                <view class="list-item-info">
+                    <view class="list-item-time">剩余纸数量:{{item.numberofpaper}}</view>
+                    <view class="list-item-lng">打印机位置:{{item.position}}</view>
+                    <view class="list-item-lat">打印机状态:{{item.state}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 如果printerListLen为0 则显示 <van-empty description="描述文字" /> -->
+        <van-empty description="暂无打印机" wx:if="{{printerListLen == 0}}" />
+    </view>
+    <view class="scan-button" bindtap="addPrinters">
+        <text class="scan-text">添加
+            设备</text>
+    </view>
+</view>
+<view wx:else>
+    <!-- 滑动图片 -->
+    <swiper class="swiper" indicator-dots="false" autoplay="true" interval="3000" duration="1000">
+        <swiper-item>
+            <image src="../../img/1.png" class="swiper-img" />
+        </swiper-item>
+        <swiper-item>
+            <image src="../../img/2.png" class="swiper-img" />
+        </swiper-item>
+        <swiper-item>
+            <image src="../../img/3.png" class="swiper-img" />
+        </swiper-item>
+    </swiper>
+    <!-- <van-grid>
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+  <van-grid-item icon="photo-o" text="文字" />
+</van-grid> -->
+    <!-- 打印机列表 -->
+    <view>
+        <view class="list-title">打印机列表</view>
+    </view>
+    <view>
+        <view class="list-len">共{{printerListLen}}台打印机</view>
+        <view class="list" wx:for="{{printerList}}" wx:key="id" bindtap="printFile" data-id="{{item.id}}">
+            <view class="list-item">
+                <image src="../../img/print.png" class="print-img" />
+                <view class="list-item-info">
+                    <view class="list-item-time">剩余纸数量:{{item.numberofpaper}}</view>
+                    <view class="list-item-lng">打印机位置:{{item.position}}</view>
+                    <view class="list-item-lat">打印机状态:{{item.state}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 如果printerListLen为0 则显示 <van-empty description="描述文字" /> -->
+        <van-empty description="暂无打印机" wx:if="{{printerListLen == 0}}" />
+    </view>
+</view>

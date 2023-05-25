@@ -1,0 +1,18 @@
+<view>
+    <view class="list-title">我的订单列表</view>
+</view>
+<view>
+    <view class="list-len">共{{OrderListLen}}个订单</view>
+    <view class="list" wx:for="{{OrderList}}" wx:key="id"  bindtap="printFile" data-id="{{item.id}}">
+            <view class="list-item-info">
+                <view class="list-item-lng">打印单号:{{item.id}}</view>
+                <view class="list-item-lat">打印颜色:{{item.printcolor==1?'黑白':'彩色'}}</view>
+                <view class="list-item-lat">打印机ID:{{item.printid}}</view>
+                <view class="list-item-lat">打印页数:{{item.printnumber}}页</view>
+                <view class="list-item-lat">订单金额:{{item.printprice}}元</view>
+                <view class="list-item-lat">订单状态:{{item.state}}</view>
+            </view>
+    </view>
+    <!-- 如果printerListLen为0 则显示 <van-empty description="描述文字" /> -->
+    <van-empty description="暂无打印机" wx:if="{{OrderListLen == 0}}" />
+</view>
